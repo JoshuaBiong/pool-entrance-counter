@@ -1,36 +1,31 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import { useState } from 'react'
+
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [countChild, setCountCHild] = useState(0)
+  const [countAdult, setCountAdult] = useState(0)
 
   return (
     <>
     
       <div className="container">
-        {/* <h1>{count}</h1>
-        <button onClick={() => setCount((count) => count + 1)}>
-        +  </button>
-        <button onClick={() => setCount((count) => count - 1)}>
-          -
-        </button> */}
+       
 
         <div className="cards">
-          <div className="value">0</div>
+          <div className="value">{countChild}</div>
           <div className="label">CHILD</div>
           <div className="buttons">
-            <button>-</button>
-            <button>+</button>
+            <button onClick={()=> setCountCHild(countChild-1)}>-</button>
+            <button onClick={()=>setCountCHild((countChild)=>countChild+1) }>+</button>
           </div>
         </div>
         <div className="cards">
-          <div className="value">0</div>
+          <div className="value">{countAdult}</div>
           <div className="label">ADULT</div>
           <div className="buttons">
-            <button>-</button>
-            <button>+</button>
+            <button onClick={()=> setCountAdult(countAdult-1)}>-</button>
+            <button onClick={()=>setCountAdult((countAdult)=>countAdult+1) }>+</button>
           </div>
         </div>
       </div>
@@ -38,4 +33,6 @@ function App() {
     </>
   )}
 
+
 export default App
+ 
